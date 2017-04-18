@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreatePostsTable extends Migration
+class CreateMultipleFilesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,14 +13,13 @@ class CreatePostsTable extends Migration
      */
     public function up()
     {
-        Schema::create('posts', function (Blueprint $table) {
+        Schema::create('multiple_files', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('post_content');
-            $table->integer('user_id')->unsigned();
+            $table->integer('aktiviti_id')->unsigned();
+            $table->string('image_path');
             $table->timestamps();
-            
-            //foreign key
-            $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
+
+            $table->foreign('aktiviti_id')->references('id')->on('aktivitis')->onDelete('cascade');
         });
     }
 
@@ -31,6 +30,6 @@ class CreatePostsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('posts');
+        Schema::dropIfExists('multiple_files');
     }
 }

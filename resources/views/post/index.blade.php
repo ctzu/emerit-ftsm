@@ -4,8 +4,8 @@
 
 <div class="panel panel-default">
 	<div class="panel-heading">
-		<h2>Posts<a href="{{ url('/post/create') }}" class="btn btn-info pull-right"
-role="button">Create New Post</a></h2>
+		<h2>Maklumat Aktiviti<a href="{{ url('/post/create') }}" class="btn btn-info pull-right"
+role="button">Tambah Maklumat Aktiviti</a></h2>
 
 	</div>
 	<div class="panel-body">
@@ -16,9 +16,9 @@ role="button">Create New Post</a></h2>
 						<thead>
 							<tr>
 								<th>#</th>
-								<th width="65%">Content</th>
-								<th width="15%">By</th>
-								<th width="15%">Action</th>
+								<th width="65%">Maklumat</th>
+								<th width="15%">Daripada</th>
+								<th width="15%">Tindakan</th>
 							</tr>
 						</thead>
 						<tbody pull-{right}>
@@ -46,14 +46,14 @@ Auth::user()->alreadyliked($post) ? 'btn-success' : 'btn-default' }}" style="wid
 										<a href="{{ action('PostsController@edit', $post->id) }}"
 class="btn btn-primary btn-sm">Edit</a>
 										<a href="{{ action('PostsController@destroy', $post->id) }}"
-class="btn btn-danger btn-sm" id="confirm-modal">Delete</a>
+class="btn btn-danger btn-sm" id="confirm-modal">Padam</a>
 									@endif
 									</td>
 								</tr>
 								<?php $i++ ?>
 							@empty
 							<tr>
-								<td colspan="6">Looks like there is no post available.</td>
+								<td colspan="6">Rekod tiada</td>
 							</tr>
 							
 							@endforelse

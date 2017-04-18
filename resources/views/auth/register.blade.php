@@ -24,6 +24,20 @@
                             </div>
                         </div>
 
+                        <div class="form-group{{ $errors->has('nomatrik') ? ' has-error' : '' }}">
+                            <label for="nomatrik" class="col-md-4 control-label">No Matrik</label>
+
+                            <div class="col-md-6">
+                                <input id="nomatrik" type="text" class="form-control" name="nomatrik" value="{{ old('nomatrik') }}" required>
+
+                                @if ($errors->has('nomatrik'))
+                                    <span class="help-block">
+                                        <strong>{{ $errors->first('nomatrik') }}</strong>
+                                    </span>
+                                @endif
+                            </div>
+                        </div>
+
                         <div class="form-group{{ $errors->has('email') ? ' has-error' : '' }}">
                             <label for="email" class="col-md-4 control-label">Alamat E-Mail</label>
 
@@ -37,6 +51,7 @@
                                 @endif
                             </div>
                         </div>
+                        
 
                         <div class="form-group{{ $errors->has('password') ? ' has-error' : '' }}">
                             <label for="password" class="col-md-4 control-label">Kata Laluan</label>

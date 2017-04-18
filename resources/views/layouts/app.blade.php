@@ -46,9 +46,9 @@
                         &nbsp;
                         <li><a href="{{ url('/home') }}">Laman Utama</a></li>
                         <li><a href="{{ url('/') }}">Tentang Kami</a></li>
-                        <li><a href="{{ url('/') }}">Kelab</a></li>
-                        <li><a href="{{ url('/') }}">Hebahan Aktiviti</a></li>
-                        <li><a href="{{ url('/') }}">E-Merit</a></li>
+                        <li><a href="{{ url('/papar') }}">Papar Buletin FTSM</a></li>
+                        <li><a href="{{ url('/hebahan') }}">Hebahan Aktiviti</a></li>
+                        <li><a href="{{ url('/aktiviti') }}">E-Merit</a></li>
                         <li><a href="{{ url('/') }}">Direktori</a></li>
                         <li><a href="{{ url('/') }}">FAQs</a></li>
                         <li><a href="{{ url('/') }}">Hubungi Kami</a></li>
